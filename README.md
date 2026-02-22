@@ -29,7 +29,3 @@ El backend permite configurar algunas variables opcionales mediante el entorno:
 | Variable       | Descripción                            | Valor por defecto                   |
 |----------------|----------------------------------------|------------------------------------|
 | DATABASE_URL    | Cadena de conexión de la base de datos | `sqlite:///./empleados.db`         |
-
-### Ejemplo con SQLite
-```bash
-docker run -d -p 8000:8000 empleados_api
