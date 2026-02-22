@@ -1,0 +1,17 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:GestionEmpleadosMaui.PageModels"
+             x:DataType="vm:DepartamentoDetailPageModel"
+             x:Class="GestionEmpleadosMaui.Pages.DepartamentoDetailPage"
+             Title="Detalle de Departamento">
+    <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+        <Frame BackgroundColor="#1B263B" Padding="30" CornerRadius="20">
+            <VerticalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Label Text="🏢" FontSize="60" HorizontalOptions="Center"/>
+                <Label Text="{Binding Departamento.Nombre}" FontSize="28" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+                <Label Text="{Binding Departamento.Id, StringFormat='Código Interno: {0}'}" TextColor="#D1D1D1" HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </Frame>
+        <Button Text="Volver" Command="{Binding VolverCommand}" BackgroundColor="#1B263B" CornerRadius="20" WidthRequest="150"/>
+    </VerticalStackLayout>
+</ContentPage>

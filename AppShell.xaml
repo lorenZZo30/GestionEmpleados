@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="GestionEmpleadosMaui.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:GestionEmpleadosMaui"
+    xmlns:pages="clr-namespace:GestionEmpleadosMaui.Pages"
+    Title="GestionEmpleadosMaui">
+
+    <FlyoutItem Title="Home">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate pages:MainPage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Empleados">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate pages:EmpleadosPage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Departamentos">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate pages:DepartamentosPage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Sedes">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate pages:SedesPage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Ajustes">
+        <ShellContent ContentTemplate="{DataTemplate pages:SettingsPage}" />
+    </FlyoutItem>
+
+</Shell>

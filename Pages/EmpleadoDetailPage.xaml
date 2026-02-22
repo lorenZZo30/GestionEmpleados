@@ -1,0 +1,28 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:GestionEmpleadosMaui.PageModels"
+             x:DataType="vm:EmpleadoDetailPageModel"
+             x:Class="GestionEmpleadosMaui.Pages.EmpleadoDetailPage"
+             Title="Ficha de Empleado">
+    <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+        <Frame BackgroundColor="#1B263B" Padding="30" CornerRadius="20">
+            <VerticalStackLayout Spacing="15" HorizontalOptions="Center">
+                <Label Text="👤" FontSize="80" HorizontalOptions="Center"/>
+                <Label Text="{Binding Empleado.Nombre}" FontSize="28" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+
+                <BoxView Color="White" HeightRequest="1" HorizontalOptions="Fill"/>
+
+                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                    <Label Text="Pertenece al Depto:" TextColor="Gray"/>
+                    <Label Text="{Binding Empleado.DepartamentoId}" TextColor="White" FontAttributes="Bold"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                    <Label Text="Ubicado en Sede:" TextColor="Gray"/>
+                    <Label Text="{Binding Empleado.SedeId}" TextColor="White" FontAttributes="Bold"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Frame>
+        <Button Text="Cerrar Ficha" Command="{Binding VolverCommand}" BackgroundColor="#1B263B" CornerRadius="20" WidthRequest="180"/>
+    </VerticalStackLayout>
+</ContentPage>

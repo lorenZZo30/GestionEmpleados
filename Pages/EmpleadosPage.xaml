@@ -1,0 +1,37 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:GestionEmpleadosMaui.Models"
+             xmlns:vm="clr-namespace:GestionEmpleadosMaui.PageModels"
+             x:DataType="vm:EmpleadosPageModel"
+             x:Class="GestionEmpleadosMaui.Pages.EmpleadosPage"
+             Title="Empleados">
+
+    <CollectionView ItemsSource="{Binding Empleados}"
+                    SelectionMode="Single" 
+                    SelectedItem="{Binding EmpleadoSeleccionado}">
+        <CollectionView.ItemsLayout>
+            <GridItemsLayout Orientation="Vertical" Span="2" HorizontalItemSpacing="10" VerticalItemSpacing="10" />
+        </CollectionView.ItemsLayout>
+
+        <CollectionView.EmptyView>
+            <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="0,50">
+                <Label Text="No hay empleados registrados." TextColor="Gray" FontSize="18" HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </CollectionView.EmptyView>
+
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="models:Empleado">
+                <Frame BackgroundColor="#1B263B" BorderColor="Transparent" Padding="15" HasShadow="True">
+                    <HorizontalStackLayout Spacing="15">
+                        <Label Text="👤" FontSize="30" VerticalOptions="Center"/>
+                        <VerticalStackLayout VerticalOptions="Center">
+                            <Label Text="{Binding Nombre}" FontSize="16" FontAttributes="Bold" TextColor="White"/>
+                            <Label Text="{Binding Id, StringFormat='ID: {0}'}" FontSize="11" TextColor="#D1D1D1"/>
+                            <Label Text="{Binding DepartamentoId, StringFormat='Depto: {0}'}" FontSize="11" TextColor="#D1D1D1"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

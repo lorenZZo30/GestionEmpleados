@@ -1,0 +1,39 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:GestionEmpleadosMaui.PageModels"
+             x:DataType="vm:MainPageModel"
+             x:Class="GestionEmpleadosMaui.Pages.MainPage"
+             Title="Página principal">
+
+    <ScrollView Padding="20">
+        <VerticalStackLayout Spacing="20">
+            <Label Text="Resumen de la organización" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" ColumnSpacing="15" RowSpacing="15">
+                <Frame Grid.Row="0" Grid.Column="0" BackgroundColor="#1B263B" BorderColor="Transparent">
+                    <VerticalStackLayout HorizontalOptions="Center">
+                        <Label Text="👤" FontSize="40" HorizontalOptions="Center"/>
+                        <Label Text="{Binding TotalEmpleados}" FontSize="28" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+                        <Label Text="Empleados" TextColor="White" HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Frame Grid.Row="0" Grid.Column="1" BackgroundColor="#1B263B" BorderColor="Transparent">
+                    <VerticalStackLayout HorizontalOptions="Center">
+                        <Label Text="🏢" FontSize="40" HorizontalOptions="Center"/>
+                        <Label Text="{Binding TotalDepartamentos}" FontSize="28" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+                        <Label Text="Departamentos" TextColor="White" HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Frame Grid.Row="1" Grid.ColumnSpan="2" BackgroundColor="#1B263B" BorderColor="Transparent">
+                    <VerticalStackLayout HorizontalOptions="Center">
+                        <Label Text="📍" FontSize="40" HorizontalOptions="Center"/>
+                        <Label Text="{Binding TotalSedes}" FontSize="28" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center"/>
+                        <Label Text="Sedes" TextColor="White" HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Frame>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
