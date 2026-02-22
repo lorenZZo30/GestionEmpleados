@@ -32,11 +32,17 @@ GestionEmpleadosMaui/
 ├── Models/ → Clases de datos
 
 ├── PageModels/ → Lógica de presentación
+
 ├── Pages/ → Interfaces de usuario
+
 ├── Services/ → Comunicación con la API
+
 ├── Platforms/ → Configuración específica de cada plataforma
+
 ├── Resources/ → Imágenes, estilos y fuentes
+
 ├── App.xaml → Definición global de la app
+
 └── GestionEmpleadosMaui.csproj
 
 
