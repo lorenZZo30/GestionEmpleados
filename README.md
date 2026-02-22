@@ -20,6 +20,6 @@ docker run -d -p -e DATABASE_URL="postgres://postgres:123456@127.0.0.1:5432/dumm
 ```
 
 Acceder a la documentación de la API:
-'''bash
+['''code
 http://localhost:8000/docs
-'''
+'''](http://localhost:8000/docs)
