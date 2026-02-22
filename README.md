@@ -18,3 +18,8 @@ Utilizando otra bbdd:
 ```bash
 docker run -d -p -e DATABASE_URL="postgres://postgres:123456@127.0.0.1:5432/dummy" 8000:8000 libros_api
 ```
+
+Acceder a la documentación de la API:
+'''bash
+http://localhost:8000/docs
+'''
