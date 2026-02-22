@@ -21,3 +21,15 @@ docker run -d -p -e DATABASE_URL="postgres://postgres:123456@127.0.0.1:5432/dumm
 
 Acceder a la documentación de la API:
 [http://localhost:8000/docs](http://localhost:8000/docs)
+
+## ⚙️ Configuración de variables de entorno
+
+El backend permite configurar algunas variables opcionales mediante el entorno:
+
+| Variable       | Descripción                            | Valor por defecto                   |
+|----------------|----------------------------------------|------------------------------------|
+| DATABASE_URL    | Cadena de conexión de la base de datos | `sqlite:///./empleados.db`         |
+
+### Ejemplo con SQLite
+```bash
+docker run -d -p 8000:8000 empleados_api
