@@ -28,7 +28,9 @@ La app está desarrollada con **.NET MAUI** usando el patrón **MVVM**.
 
 ## 📂 Estructura del proyecto
 GestionEmpleadosMaui/
+
 ├── Models/ → Clases de datos
+
 ├── PageModels/ → Lógica de presentación
 ├── Pages/ → Interfaces de usuario
 ├── Services/ → Comunicación con la API
