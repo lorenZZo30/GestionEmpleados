@@ -48,6 +48,7 @@ GestionEmpleadosMaui/
 4. Asegurarse de que el **backend esté activo** en:
 ```bash
 http://localhost:8000
+```
 
 ![App funcionando](docs/screenshot.png)
 
